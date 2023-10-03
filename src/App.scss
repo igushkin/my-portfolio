@@ -33,20 +33,242 @@
   font-style: normal;
 }
 
+@media (min-width: 1400px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 1200px !important;
+  }
+}
+
 body, body * {
   font-family: "Fira Code" !important;
   font-weight: 400 !important;
 }
 
-img{
+img {
   max-width: 100%;
 }
 
-.row{
+.row {
   min-height: 100vh;
 }
 
-.img-container{
+.img-container {
   align-self: flex-end;
   padding-bottom: 3%;
+}
+
+body {
+  min-height: 100vh !important;
+}
+
+$green: #004029;
+$dark_green: #003422;
+$yellow: #F6BE81;
+$gray: #e1e1e1;
+$light_green: #a2f678;
+$white: #fff;
+$border_color: rgba(255, 255, 255, .1);
+
+.txt-white {
+  color: $white;
+}
+
+.txt-yellow {
+  color: $yellow;
+}
+
+button.btn-outline-primary {
+  color: #75BEFF;
+  border-color: rgba(117, 190, 255, 0.5);
+  padding: 6px 20px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500 !important;
+}
+
+button.btn-outline-primary:hover {
+  background-color: rgba(117, 190, 255, 0.08);
+}
+
+body {
+  background-color: #011627 !important;
+}
+
+.nav-bar {
+  background-color: #001122 !important;
+  border-right: 1px solid $border_color;
+  position: fixed !important;
+}
+
+.nav-bar a svg {
+  color: #75BEFF;
+}
+
+.projects h1 {
+  margin: 24px 0;
+  margin-bottom: 14px;
+  color: $yellow;
+  text-transform: capitalize;
+}
+
+.projects button.btn-outline-primary {
+  text-transform: capitalize;
+  height: auto;
+  font-size: 13px;
+  font-weight: 400 !important;
+}
+
+.projects button.btn-outline-primary.selected {
+  color: #FA8C66;
+  border-color: #FA8C66;
+  background-color: #0B253A;
+}
+
+.projects .btn-group {
+  margin-top: 16px;
+  margin-bottom: 30px;
+}
+
+.chakra-card {
+  border: 1px solid $border_color !important;
+  background-color: #0B253A !important;
+
+  h2 {
+    color: $white;
+    font-size: 19px;
+  }
+
+  .card-footer {
+    padding: 8px;
+    padding-top: 0;
+  }
+
+  .tags {
+    font-size: 14px;
+    color: #A8DF67;
+  }
+}
+
+p {
+  font-size: 16px;
+}
+
+.home p {
+  color: #A8DF67;
+}
+
+.home a {
+  color: #75BEFF;
+  text-decoration: underline;
+}
+
+.about-page {
+
+  h1 {
+    color: $yellow;
+  }
+
+  h2 {
+    font-size: 24px;
+    color: $white;
+  }
+
+  .mt {
+    margin-top: 40px !important;
+  }
+}
+
+button.learnMore {
+  color: #75BEFF;
+  border: none;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-size: 13px;
+  height: fit-content;
+  padding: 8px;
+}
+
+button.learnMore:hover {
+  background-color: rgba(117, 190, 255, 0.08);
+}
+
+.chakra-card__body {
+  padding: 16px !important;
+}
+
+.tags {
+  margin: 0;
+}
+
+.card-footer span {
+  color: #70CAB9;
+  font-size: 12px;
+}
+
+.about-page ul {
+  display: flex;
+  padding: 0;
+  flex-wrap: wrap;
+  list-style: none;
+
+  li {
+    margin-right: 16px;
+    margin-bottom: 12px;
+  }
+
+  .wrapper {
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    align-items: center;
+    background-color: #0B253A;
+    color: #fff;
+    cursor: default;
+    height: 32px;
+    display: inline-flex;
+    outline: 0;
+    padding: 0;
+    font-size: 0.8125rem;
+    box-sizing: border-box;
+    transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    white-space: nowrap;
+    border-radius: 16px;
+    vertical-align: middle;
+    justify-content: center;
+    text-decoration: none;
+  }
+
+  .box {
+    color: #e0e0e0;
+    width: 24px;
+    height: 24px;
+    font-size: 0.75rem;
+    margin-left: 5px;
+    margin-right: -6px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-items: center;
+    flex-shrink: 0;
+    line-height: 1;
+    user-select: none;
+    border-radius: 50%;
+    justify-content: center;
+  }
+
+  img {
+    color: transparent;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    text-align: center;
+    text-indent: 10000px;
+  }
+
+  .label {
+    overflow: hidden;
+    white-space: nowrap;
+    padding-left: 12px;
+    padding-right: 12px;
+    text-overflow: ellipsis;
+  }
 }

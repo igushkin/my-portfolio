@@ -18,7 +18,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/my-projects" element={<Projects />} />
+        <Route path="/my-projects" element={<Projects color={'teal'} />} />
       </Route>
     </Routes>
   </AnimatePresence>
