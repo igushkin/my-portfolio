@@ -18,9 +18,7 @@ function MyModal({project, isOpen, onClose}) {
     ];
 
     const containerStyles = {
-        width: "100%",
-        height: '200px',
-        margin: "0 auto",
+
     };
 
     return (<>
