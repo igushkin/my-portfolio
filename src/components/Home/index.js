@@ -53,8 +53,8 @@ const Home = () => {
                         exit={{opacity: 0}}
                         transition={{duration: 1, delay: delayFirst}}
                     >
-                        <p style={{maxWidth: 435}}>I love building responsive and functional
-                            websites and web applications.</p>
+                        <p style={{maxWidth: 435}}>I enjoy utilizing modern technology to develop user-centric
+                            applications.</p>
                         <p style={{maxWidth: 435}}>Got an idea I can help you with?
                             <span> </span>
                             <NavLink exact="true" activeclassname="active"

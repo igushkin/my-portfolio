@@ -29,12 +29,14 @@ const About = () => {
                                 exit={{opacity: 0}}
                                 transition={{duration: 1}}
                     >
-                        <p className='green'>I’m a full-stack web developer and UX/UI enthusiast, living in Dublin,
-                            Ireland.</p>
-                        <p className='green'>I’m passionate about building intuitive and accessible web interfaces,
-                            while writing clean, maintainable code.</p>
-                        <p className='green'>I have done work in front-end and back-end web development, automation
-                            testing, built WordPress websites and Machine Learning projects.</p>
+                        <p className='green'>I'm a Computer Science graduate with experience in C# development,
+                            currently based in Dublin.</p>
+
+                        <p className='green'>My primary focus has been on back-end development, although
+                            I also possess a strong proficiency in fron-end technologies.</p>
+
+                        <p className='green'>I'm eager to leverage my qualifications and experience in
+                            building modern, scalable, and reliable applications.</p>
                     </motion.div>
 
                     <motion.div className="about-page"
@@ -84,7 +86,7 @@ const About = () => {
                     >
                         <p>Have a question or would like to work together?
                             <span> </span>
-                            <NavLink exact="true" activeclassname="active" to="/"><span>Contact me</span>
+                            <NavLink exact="true" activeclassname="active" to="/contact"><span>Contact me</span>
                             </NavLink>.
                         </p>
                     </motion.div>
