@@ -1,67 +1,62 @@
-import { useState, useEffect } from "react";
+import {useState, useEffect} from "react";
 
 const parseOtherProjects = (mdContent) => {
-  const others = [];
-  const lines = mdContent.split("\n");
+    const projects = [];
+    const lines = mdContent.split("\r\n");
 
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
+    for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        const projMap = new Map();
 
-    if (line.startsWith("## ")) {
-      const name = line.substr(3).trim();
-      const description = lines[++i].trim();
-      const tags = lines[++i].split(":")[1].trim();
-      const badges = [];
-      const buttons = [];
+        if (line.startsWith("## ")) {
+            for (let y = i + 1; y < lines.length; y++) {
+                let line = lines[y].trim();
 
-      while (lines[++i] && !lines[i].startsWith("- Badges:")) {}
-      while (lines[++i] && lines[i].startsWith("  - ")) {
-        const badgeLine = lines[i].substr(4).split("[");
-        const badgeName = badgeLine[0].trim();
-        const badgeColor = badgeLine[1].split("]")[0].trim();
-        badges.push({ text: badgeName, colorScheme: badgeColor });
-      }
+                if (!line) {
+                    break;
+                }
 
-      while (lines[++i] && lines[i].startsWith("  - ")) {
-        const buttonLine = lines[i].substr(4).split("[");
-        const buttonText = buttonLine[0].trim();
-        const buttonHref = buttonLine[1].split("]")[0].trim();
-        buttons.push({ text: buttonText, href: buttonHref });
-      }
+                let key = line.split("::")[0];
+                let value = line.split("::")[1];
+                projMap.set(key, value);
+            }
 
-      others.push({
-        name,
-        description,
-        tags: [tags],
-        badges,
-        buttons,
-      });
+            projects.push({
+                name: projMap.get("name"),
+                description: projMap.get("description"),
+                date: projMap.get("date"),
+                contribution: projMap.get("contribution").split("|"),
+                tags: projMap.get("tags").split(","),
+                thumbnail: projMap.get("thumbnail"),
+                images: projMap.get("images").split(","),
+                tools: projMap.get("tools").split(","),
+                sourceCode: projMap.get("sourceCode")
+            });
+        }
     }
-  }
-
-  return others;
+    return projects;
 };
 
 const ProjectsArray = () => {
-  const [OtherProjects, setOtherProjects] = useState([]);
+    const [OtherProjects, setOtherProjects] = useState([]);
 
-  useEffect(() => {
-    fetch("/content/Projects.md")
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Failed to fetch markdown content");
-        }
-        return response.text();
-      })
-      .then((mdContent) => {
-        setOtherProjects(parseOtherProjects(mdContent));
-      })
-      .catch((error) => {
-        console.error("Error fetching markdown content:", error);
-      });
-  }, []);
+    useEffect(() => {
+        fetch("/content/Projects.md")
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error("Failed to fetch markdown content");
+                }
+                return response.text();
+            })
+            .then((mdContent) => {
+                setOtherProjects(parseOtherProjects(mdContent));
+            })
+            .catch((error) => {
+                console.error("Error fetching markdown content:", error);
+            });
+    }, []);
 
-  return OtherProjects;
+    return OtherProjects;
 };
 
 export default ProjectsArray;

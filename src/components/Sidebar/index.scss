@@ -33,7 +33,7 @@
     width: 100%;
 
     a {
-      font-size: 22px;
+      font-size: 20px;
       color: #4d4d4e;
       display: block;
       line-height: 51px;
@@ -46,7 +46,7 @@
       }
 
       &:hover {
-        color: #ffd700;
+        color: #FA8C66;
 
         svg {
           opacity: 0;
@@ -92,13 +92,13 @@
 
     a.skills-link {
       &:after {
-        content: 'SKILLS';
+        content: 'WORK';
       }
     }
 
     a.active {
       svg {
-        color: #FA8C66;
+        color: #FA8C66 !important;
       }
     }
   }
@@ -117,7 +117,7 @@
       a {
         padding: 7px 0;
         display: block;
-        font-size: 22px;
+        font-size: 20px;
         line-height: 16px;
         color: #4d4d4e;
 
@@ -131,4 +131,12 @@
 
 .random {
   color: #b9b9b9;
+}
+
+.contact-link.active {
+  background-color: rgba(255, 255, 255, 0.16);
+}
+
+.nav-bar a:hover {
+  background-color: rgba(255, 255, 255, 0.05);
 }

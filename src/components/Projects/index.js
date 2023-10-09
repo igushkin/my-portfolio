@@ -1,33 +1,15 @@
-import {
-    Divider,
-    Stack,
-    Text,
-    Box,
-    HStack,
-    Button,
-    ButtonGroup,
-    Card,
-    CardBody,
-    Image,
-    Heading,
-    SimpleGrid,
-    Badge,
-    Link,
-    Center, IconButton, Avatar, Flex, useDisclosure,
-} from "@chakra-ui/react";
+import {Button, ButtonGroup, Card, CardBody, Center, Flex, SimpleGrid, useDisclosure,} from "@chakra-ui/react";
 import {useState} from "react";
 import ProjectsArray from "./ProjectsArray";
 import TagsArray from "./TagsArray";
 import {motion} from 'framer-motion'
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import HomeSVG from '../../assets/images/home.svg';
 import Container from 'react-bootstrap/Container';
 import {CardFooter, CardHeader} from "react-bootstrap";
 import MyModal from "../modal";
 
+
 export default function Projects({color}) {
-    const others = ProjectsArray();
+    const projects = ProjectsArray();
     const options = TagsArray("ProjectsTags");
 
     const [selected, setSelected] = useState("All");
@@ -72,44 +54,47 @@ export default function Projects({color}) {
                 </Center>
 
                 <SimpleGrid columns={[1, 2, 3]} px={4} spacingX='70px' spacingY='25px'>
-                    {others
-                        .filter((other) => {
+                    {projects
+                        .filter((project) => {
                             if (selected === "All") {
                                 return true;
                             } else {
-                                return other.tags.includes(selected);
+                                return project.tags.includes(selected);
                             }
                         })
-                        .map((other) => (
-                            <Card maxW='md' overflow={"hidden"} key={other.name}
+                        .map((project) => (
+                            <Card maxW='md' overflow={"hidden"} key={project.name}
                                   style={{
                                       backgroundColor: '#20382f'
                                   }}
                             >
                                 <div className="clickable" onClick={() => {
-                                    setProject(other);
+                                    setProject(project);
                                     onOpen();
                                 }}>
                                     <CardHeader
                                         style={{
-                                            backgroundImage: 'url("https://www.martas.me/img/work/cards/synneuro.jpg")',
+                                            backgroundImage: `url(${project.thumbnail})`,
                                             paddingTop: '56.25%',
                                             backgroundSize: 'cover'
                                         }}>
                                     </CardHeader>
                                     <CardBody>
                                         <h2 className="white">
-                                            {other.name}
+                                            {project.name}
                                         </h2>
                                         <p className="tags">
-                                            UX/UI / React.js / Python
+                                            {project.tags.join(" / ")}
                                         </p>
                                     </CardBody>
                                 </div>
                                 <CardFooter>
                                     <Flex justifyContent={"space-between"}>
-                                        <Button className="learnMore">learn more</Button>
-                                        <span>Jun-Jul 2022</span>
+                                        <Button className="learnMore"
+                                                onClick={() => window.open(project.sourceCode, "_blank")}>
+                                            source code
+                                        </Button>
+                                        <span style={{display: "none"}}>Jun-Jul 2022</span>
                                     </Flex>
                                 </CardFooter>
                             </Card>

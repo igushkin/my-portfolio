@@ -1,6 +1,6 @@
 import {useState, useEffect} from "react";
 
-const parseFrontSkills = (mdContent) => {
+const parseSkills = (mdContent) => {
     const skills = [];
     const lines = mdContent.split("\n");
 
@@ -21,11 +21,11 @@ const parseFrontSkills = (mdContent) => {
     return skills;
 };
 
-const FrontSkillsArray = () => {
+const SkillsArray = (path) => {
     const [OtherProjects, setOtherProjects] = useState([]);
 
     useEffect(() => {
-        fetch("/content/FrontEndSkills.md")
+        fetch(path)
             .then((response) => {
                 if (!response.ok) {
                     throw new Error("Failed to fetch markdown content");
@@ -33,7 +33,7 @@ const FrontSkillsArray = () => {
                 return response.text();
             })
             .then((mdContent) => {
-                setOtherProjects(parseFrontSkills(mdContent));
+                setOtherProjects(parseSkills(mdContent));
             })
             .catch((error) => {
                 console.error("Error fetching markdown content:", error);
@@ -43,4 +43,4 @@ const FrontSkillsArray = () => {
     return OtherProjects;
 };
 
-export default FrontSkillsArray;
+export default SkillsArray;

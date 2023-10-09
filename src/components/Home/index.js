@@ -1,15 +1,12 @@
-import {Link, NavLink} from 'react-router-dom'
-import LogoTitle from '../../assets/images/logo-s.png'
+import {NavLink} from 'react-router-dom'
 import './index.scss'
 import {motion} from 'framer-motion'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
+import {Button} from "@chakra-ui/react";
 import HomeSVG from '../../assets/images/home.svg'
-import {Typewriter, Cursor} from 'react-simple-typewriter';
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faHome} from "@fortawesome/free-solid-svg-icons";
+import {Typewriter} from 'react-simple-typewriter';
 
 const Home = () => {
 
@@ -17,6 +14,16 @@ const Home = () => {
     let letters = 18;
     let delayFirst = typeSpeed * letters / 1000 + 0.3;
     let delaySecond = delayFirst + 0.7;
+
+    const buttonStyle = {
+        fontWeight: "400",
+        padding: "7px 21px",
+        fontSize: "0.9375rem",
+        color: "#75BEFF",
+        border: "1px solid rgba(117, 190, 255, 0.5)",
+        backgroundColor: "transparent",
+        textTransform: "uppercase",
+    }
 
     return (
 
@@ -47,12 +54,12 @@ const Home = () => {
                         exit={{opacity: 0}}
                         transition={{duration: 1, delay: delayFirst}}
                     >
-                        <p className="txt-white" style={{maxWidth: 425}}>I love building responsive and functional
+                        <p className="txt-white" style={{maxWidth: 435}}>I love building responsive and functional
                             websites and web applications.</p>
-                        <p className="txt-white" style={{maxWidth: 425}}>Got an idea I can help you with?
+                        <p className="txt-white" style={{maxWidth: 435}}>Got an idea I can help you with?
                             <span> </span>
-                            <NavLink exact="true" activeclassname="active" to="/"><span>Contact me.</span>
-                            </NavLink>
+                            <NavLink exact="true" activeclassname="active"
+                                     to="/my-projects"><span>Contact me</span></NavLink>.
                         </p>
                     </motion.div>
                     <motion.div
@@ -61,11 +68,20 @@ const Home = () => {
                         exit={{opacity: 0}}
                         transition={{duration: 1, delay: delaySecond}}
                     >
-                        <Button variant="outline-primary">view my work</Button>{' '}
+                        <NavLink to="/my-projects">
+                            <Button className="work" style={buttonStyle}>view my work</Button>
+                        </NavLink>
                     </motion.div>
                 </Col>
                 <Col sm={6} className='img-container'>
-                    <img src={HomeSVG}/>
+                    <motion.div
+                        initial={{opacity: 0}}
+                        animate={{opacity: 1}}
+                        exit={{opacity: 0}}
+                        transition={{duration: 1, delay: delayFirst}}
+                    >
+                        <img src={HomeSVG}/>
+                    </motion.div>
                 </Col>
             </Row>
         </Container>

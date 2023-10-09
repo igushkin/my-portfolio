@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+}
+
+.form {
+  border-radius: 20px;
+}
+
+.title {
+  color: #eee;
+  font-size: 36px;
+  font-weight: 600;
+  margin-top: 30px;
+}
+
+.subtitle {
+  color: #eee;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.input-container {
+  position: relative;
+  width: 100%;
+}
+
+.ic1 {
+  margin-top: 16px;
+}
+
+.ic2 {
+  margin-top: 16px;
+}
+
+.input {
+  background-color: transparent;
+  border-radius: 4px;
+  color: white;
+  font-size: 18px;
+  height: auto;
+  outline: 0;
+  padding: 18px 14px;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.23);
+  line-height: 19px;
+}
+
+.cut {
+  background-color: #011627;
+  border-radius: 10px;
+  height: 20px;
+  left: 20px;
+  position: absolute;
+  top: -20px;
+  transform: translateY(0);
+  transition: transform 200ms;
+  width: 76px;
+}
+
+.cut-short {
+  width: 56px;
+}
+
+.input:focus ~ .cut,
+.input:not(:placeholder-shown) ~ .cut {
+  transform: translateY(8px);
+}
+
+.placeholder {
+  color: white;
+  left: 9px;
+  line-height: 19px;
+  pointer-events: none;
+  position: absolute;
+  transform-origin: 0 50%;
+  transition: transform 200ms, color 200ms;
+  top: 19px;
+  background-color: #011627 !important;
+  opacity: 1 !important;
+  text-transform: capitalize;
+  padding: 0 10px 0 5px !important;
+}
+
+.input:focus ~ .placeholder,
+.input:not(:placeholder-shown) ~ .placeholder {
+  transform: translateY(-30px) translateX(0px) scale(0.75);
+  padding: 0 0px;
+}
+
+.input:not(:placeholder-shown) ~ .placeholder {
+  color: #808097;
+}
+
+.input:focus ~ .placeholder {
+  color: #75BEFF;
+}
+
+.submit {
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #75BEFF;
+  padding: 8px 22px;
+  font-size: 0.9375rem;
+  border-radius: 4px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-top: 8px;
+}
+
+.submit:active {
+  background-color: #06b;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+a, a:link, a:hover, a:visited {
+  color: #808097;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+input:focus, textarea:focus {
+  border-color: #75BEFF !important;
+}
+
+input:hover {
+  border-color: white;
+}

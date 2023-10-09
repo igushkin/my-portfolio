@@ -1,6 +1,19 @@
 ## Skill
-name:HTML
-img:https://www.martas.me/img/icons/html.svg
+name:C#
+img:/images/skills/c.svg
+
 ## Skill
-name:HTML
-img:https://www.martas.me/img/icons/html.svg
+name:Java
+img:/images/skills/java.svg
+
+## Skill
+name:Spring Boot
+img:/images/skills/spring-boot.svg
+
+## Skill
+name:Node.js
+img:/images/skills/nodejs.svg
+
+## Skill
+name:MySQL
+img:/images/skills/mysql.png
