@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 const parseTags = (mdContent) => {
   const tags = [];
-  const lines = mdContent.split("\r\n");
+  const lines = mdContent.split("\n");
   for (let i = 0; i < lines.length; i++) {
     const value = lines[i];
 

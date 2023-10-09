@@ -2,7 +2,7 @@ import {useState, useEffect} from "react";
 
 const parseOtherProjects = (mdContent) => {
     const projects = [];
-    const lines = mdContent.split("\r\n");
+    const lines = mdContent.split("\n");
 
     for (let i = 0; i < lines.length; i++) {
         const line = lines[i];
