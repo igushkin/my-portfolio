@@ -1,5 +1,5 @@
 import './App.scss';
-import {Route, Routes, useLocation} from 'react-router-dom'
+import {Navigate, Route, Routes, useLocation} from 'react-router-dom'
 import Layout from './components/Layout'
 import About from './components/About'
 import Projects from './components/Projects'
@@ -16,6 +16,7 @@ function App() {
                     <Route path="about" element={<About/>}/>
                     <Route path="/contact" element={<Contact/>}/>
                     <Route path="/my-projects" element={<Projects color={'teal'}/>}/>
+                    <Route path="/*" element={<Navigate to="/"/>}/>
                 </Route>
             </Routes>
         </AnimatePresence>
