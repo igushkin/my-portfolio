@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/my-portfolio/static/css/main.d53ee578.css",
+    "main.js": "/my-portfolio/static/js/main.49cdf0e1.js",
+    "static/js/787.128fc6e9.chunk.js": "/my-portfolio/static/js/787.128fc6e9.chunk.js",
+    "static/media/FiraCode-Bold.woff2": "/my-portfolio/static/media/FiraCode-Bold.abe3ab87cff86bb05610.woff2",
+    "static/media/FiraCode-SemiBold.woff2": "/my-portfolio/static/media/FiraCode-SemiBold.564932952cfbb676de45.woff2",
+    "static/media/FiraCode-Regular.woff2": "/my-portfolio/static/media/FiraCode-Regular.bf5ea52fa0094c7f7621.woff2",
+    "static/media/FiraCode-Light.woff2": "/my-portfolio/static/media/FiraCode-Light.89b207dfa6dd890c3f41.woff2",
+    "static/media/FiraCode-Medium.woff2": "/my-portfolio/static/media/FiraCode-Medium.1bc138a84f63b384c3f2.woff2",
+    "static/media/about1.svg": "/my-portfolio/static/media/about1.5cee05003414840844afbbf53bd3df9d.svg",
+    "static/media/home.svg": "/my-portfolio/static/media/home.7b254d7a45a8c0d3e15ff4d3784887be.svg",
+    "static/media/logo.svg": "/my-portfolio/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/coding.svg": "/my-portfolio/static/media/coding.5f55fd463c1a5d5edf9d31cc3b9790fd.svg",
+    "index.html": "/my-portfolio/index.html",
+    "main.d53ee578.css.map": "/my-portfolio/static/css/main.d53ee578.css.map",
+    "main.49cdf0e1.js.map": "/my-portfolio/static/js/main.49cdf0e1.js.map",
+    "787.128fc6e9.chunk.js.map": "/my-portfolio/static/js/787.128fc6e9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d53ee578.css",
+    "static/js/main.49cdf0e1.js"
+  ]
+}
