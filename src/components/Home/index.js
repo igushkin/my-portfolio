@@ -26,7 +26,6 @@ const Home = () => {
     }
 
     return (
-
         <Container className='home'>
             <Row>
                 <Col className='mt' sm={6}>
@@ -54,12 +53,12 @@ const Home = () => {
                         exit={{opacity: 0}}
                         transition={{duration: 1, delay: delayFirst}}
                     >
-                        <p className="txt-white" style={{maxWidth: 435}}>I love building responsive and functional
+                        <p style={{maxWidth: 435}}>I love building responsive and functional
                             websites and web applications.</p>
-                        <p className="txt-white" style={{maxWidth: 435}}>Got an idea I can help you with?
+                        <p style={{maxWidth: 435}}>Got an idea I can help you with?
                             <span> </span>
                             <NavLink exact="true" activeclassname="active"
-                                     to="/my-projects"><span>Contact me</span></NavLink>.
+                                     to="/contact"><span>Contact me</span></NavLink>.
                         </p>
                     </motion.div>
                     <motion.div
@@ -74,14 +73,7 @@ const Home = () => {
                     </motion.div>
                 </Col>
                 <Col sm={6} className='img-container'>
-                    <motion.div
-                        initial={{opacity: 0}}
-                        animate={{opacity: 1}}
-                        exit={{opacity: 0}}
-                        transition={{duration: 1, delay: delayFirst}}
-                    >
-                        <img src={HomeSVG}/>
-                    </motion.div>
+                    <img src={HomeSVG}/>
                 </Col>
             </Row>
         </Container>
