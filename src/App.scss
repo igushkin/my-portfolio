@@ -1933,3 +1933,9 @@ h1 {
     opacity: 1
   }
 }
+
+@media only screen and (max-width: 1000px) {
+  .css-acj5we {
+    max-width: 90% !important;
+  }
+}

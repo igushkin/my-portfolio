@@ -32,11 +32,11 @@ const About = () => {
                         <p className='green'>I'm a Computer Science graduate with experience in C# development,
                             currently based in Dublin.</p>
 
-                        <p className='green'>My primary focus has been on back-end development, although
-                            I also possess a strong proficiency in fron-end technologies.</p>
+                        <p className='green'>My primary focus has been on back-end development,
+                            although I am also well versed in front-end technologies.</p>
 
-                        <p className='green'>I'm eager to leverage my qualifications and experience in
-                            building modern, scalable, and reliable applications.</p>
+                        <p className='green'>Additionally, I excel in problem-solving and enjoy tackling complex coding
+                            challenges.</p>
                     </motion.div>
 
                     <motion.div className="about-page"
