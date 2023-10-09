@@ -7,7 +7,6 @@ import ContactForm from "../Form";
 import Lottie from "lottie-web";
 import groovyWalkAnimation from "../../assets/data.json";
 import {useEffect, useRef} from "react";
-import emailjs from '@emailjs/browser';
 
 const Contact = () => {
 

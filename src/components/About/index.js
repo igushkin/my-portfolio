@@ -6,7 +6,6 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import HomeSVG from '../../assets/images/about1.svg'
 import SkillsArray from "./SkillsArray";
-import Icon from "../SVGAnimation";
 
 const About = () => {
 
