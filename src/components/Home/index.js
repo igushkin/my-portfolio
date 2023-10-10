@@ -13,7 +13,7 @@ const Home = () => {
     let typeSpeed = 80;
     let letters = 18;
     let delayFirst = typeSpeed * letters / 1000 + 0.3;
-    let delaySecond = delayFirst + 0.7;
+    let delaySecond = delayFirst + 1;
 
     const buttonStyle = {
         fontWeight: "400",

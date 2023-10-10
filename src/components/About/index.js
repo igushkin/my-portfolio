@@ -15,7 +15,7 @@ const About = () => {
     let typeSpeed = 80;
     let letters = 18;
     let delayFirst = 0.5;
-    let delaySecond = delayFirst + 0.7;
+    let delaySecond = delayFirst + 1;
 
     return (
         <Container className='about-page'>
@@ -35,7 +35,7 @@ const About = () => {
                         <p className='green'>My primary focus has been on back-end development,
                             although I am also well versed in front-end technologies.</p>
 
-                        <p className='green'>Additionally, I excel in problem-solving and enjoy tackling complex coding
+                        <p className='green'>I excel in problem-solving and enjoy tackling complex coding
                             challenges.</p>
                     </motion.div>
 
