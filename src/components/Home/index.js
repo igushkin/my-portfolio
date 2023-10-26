@@ -53,7 +53,7 @@ const Home = () => {
                         exit={{opacity: 0}}
                         transition={{duration: 1, delay: delayFirst}}
                     >
-                        <p style={{maxWidth: 435}}>I enjoy utilizing modern technology to develop applications focused
+                        <p style={{maxWidth: 435}}>I enjoy utilizing modern technologies to develop applications focused
                             on user needs.</p>
                         <p style={{maxWidth: 435}}>Got an idea I can help you with?
                             <span> </span>
